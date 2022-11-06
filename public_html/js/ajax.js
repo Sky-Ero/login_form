@@ -9,6 +9,8 @@ function sendAjaxForm(result_form, ajax_form, url) {
     ajax_form = $("#" + ajax_form);
     result_form.html('')
     result_form.removeClass();
+    result_form.addClass('alert text_center mb-3')
+
     $.ajax({
         url: url,
         type: "POST",
@@ -18,11 +20,11 @@ function sendAjaxForm(result_form, ajax_form, url) {
             let result = $.parseJSON(response);
             if (result.status === 'success') {
                 result_form.html('Регистрация закончена');
-                result_form.addClass('text-success border-success mb-3 text-center');
+                result_form.addClass('alert-success');
                 ajax_form.remove();
             } else {
                 result_form.html(result.message);
-                result_form.addClass('text-danger border-danger mb-3');
+                result_form.addClass('alert-warning');
             }
         },
         error: function () {
