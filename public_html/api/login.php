@@ -39,6 +39,8 @@ class Logger {
      */
     public function __construct(string $log_file)
     {
+        if(!file_exists(__DIR__ . '/../var/'))
+            mkdir(__DIR__ . '/../var/');
         $this->log_file = __DIR__ . '/../var/' . $log_file;
     }
 
