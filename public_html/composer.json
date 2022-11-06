@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twbs/bootstrap": "5.2.2",
+      "ext-sodium": "*"
+    }
+}

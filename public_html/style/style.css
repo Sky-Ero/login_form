@@ -1,0 +1,8 @@
+label {
+    padding: 0.5em;
+}
+
+.error {
+    border: red solid;
+    border-radius: 1em;
+}
